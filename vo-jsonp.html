@@ -1,0 +1,22 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/utils/debounce.html">
+<script src="jsonp-mixin.js"></script>
+
+<dom-module id="vo-jsonp">
+  <template>
+    <style>
+      :host {
+        display: none;
+      }
+    </style>
+  </template>
+  <script>
+    class VoJsonP extends JsonpMixin(Polymer.Element) {
+      static get is() {
+        return 'vo-jsonp';
+      }
+    }
+
+    customElements.define(VoJsonP.is, VoJsonP);
+  </script>
+</dom-module>
