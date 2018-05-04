@@ -1,6 +1,8 @@
-# \<polymer2-vo-jsonp\>
+# \<vo-jsonp\>
 
-Use jsonp for cross domain calls
+Polymer component that uses jsonP for cross domain calls
+
+original author: Christophe De Blende
 
 ## Install the Polymer-CLI
 
@@ -12,10 +14,5 @@ First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polyme
 $ polymer serve
 ```
 
-## Running Tests
-
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+## Running Test
+Todo add test

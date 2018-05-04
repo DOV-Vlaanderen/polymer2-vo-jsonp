@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>vo-jsonp demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../paper-input/paper-input.html">
+    <link rel="import" href="../vo-jsonp.html">
+
+    <custom-style>
+        <style is="custom-style" include="demo-pages-shared-styles">
+        </style>
+    </custom-style>
+</head>
+<body>
+<div class="vertical-section-container centered">
+    <h3>Basic vo-jsonp demo</h3>
+
+    <demo-snippet>
+        <template>
+              <dom-bind><!-- add polymer databinding-->
+                  <template>
+                      <!--Get suggestion for param q:gent-->
+                      <vo-jsonp
+                              id="xhrSuggestion"
+                              url="//loc.geopunt.be/v2/suggestion"
+                              params="{&quot;q&quot;:&quot;gent&quot;}"
+                              handle-as="json"
+                              last-response="{{result}}"
+                              auto="true"></vo-jsonp>
+
+                      <h4>Result</h4>
+                      <template is="dom-repeat" items="{{result.SuggestionResult}}">
+                          <div>
+                              <a href="{{item}}">{{item}}</a>
+                          </div>
+                      </template>
+                  </template>
+              </dom-bind>
+        </template>
+    </demo-snippet>
+
+
+</div>
+</body>
+</html>

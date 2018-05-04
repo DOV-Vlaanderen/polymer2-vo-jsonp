@@ -1,7 +1,7 @@
 {
-  "name": "polymer2-vo-jsonp",
-  "description": "Use jsonp for cross domain calls",
-  "main": "polymer2-vo-jsonp.html",
+  "name": "vo-jsonp",
+  "description": "Do coss-domain calls",
+  "main": "vo-jsonp.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0"
   },

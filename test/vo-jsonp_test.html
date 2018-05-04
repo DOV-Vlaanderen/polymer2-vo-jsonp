@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>vo-jsonp test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../vo-jsonp.html">
+  </head>
+  <body>
+  <!--TODO find a way to test this-->
+    <test-fixture id="BasicTestFixture">
+      <template>
+        <vo-jsonp></vo-jsonp>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('vo-jsonp', () => {
+
+        test('instantiating the element with default properties works', () => {
+          const element = fixture('BasicTestFixture');
+          assert.equal(element.prop1, 'vo-jsonp');
+          const elementShadowRoot = element.shadowRoot;
+          const elementHeader = elementShadowRoot.querySelector('h2');
+          assert.equal(elementHeader.innerHTML, 'Hello vo-jsonp!');
+        });
+
+
+      });
+    </script>
+
+  </body>
+</html>
