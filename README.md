@@ -2,7 +2,18 @@
 
 Polymer component that uses jsonP for cross domain calls
 
-original author: Christophe De Blende
+Example:
+
+```html
+    <vo-jsonp
+            url="https://your.endpoint/"
+            params="aJsonObject"
+            handle-as="json"
+            last-response="{{result}}"
+            auto="true">
+    </vo-jsonp>
+```
+
 
 ## Install the Polymer-CLI
 
